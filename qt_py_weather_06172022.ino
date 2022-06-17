@@ -79,29 +79,22 @@ void setup() {
       }
 
 // Output Current Temp and Conditions
-//      tft.fillScreen(ILI9341_BLACK);
+      tft.fillScreen(ILI9341_BLACK);
       tft.setFont(&Roadway50pt7b);
       tft.setCursor(25, 100); //(x,y)
       tft.setTextColor(0x435c); // RGB565 hex color code
-      tft.drawRect(25, 10, 150, 100, 0x0000);
-
+      
       tft.print(lake_temp);
 //      tft.println(" F");
       tft.setCursor(110, 95);
       tft.println("o"); // char(247) if degree symbol in fornt library
       tft.setCursor(25,150);
       tft.setFont(&FreeSerif20pt7b); // return to default font: setFont()
-      tft.drawRect(25, 150, 150, 50, 0x0000);
       tft.println(currently);
 
-// draw icon
-
-//      drawBitmap(65, 70, clear_day, 195, 146,GREEN);
-
 // Output 5 Hour Forecast
-      
+     
       tft.setFont(&FreeSerif12pt7b);
-      tft.drawRect(25, 180, 215, 60, 0x0000);
       for (int i = 0; i < 5; i++) {
         int x = 25 + 55 * i;
         tft.setCursor(x, 195); //was 190
